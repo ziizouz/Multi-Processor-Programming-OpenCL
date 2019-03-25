@@ -1,17 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
+#include <vector>
 
 #ifdef __APPLE__
 #include <OpenCL/opencl.h>
 #else
-#include <CL/cl.h>
+#include <CL/cl.hpp>
 #endif
 
+using namespace std;
+using namespace cl;
 #define MAX_SOURCE_SIZE (0x100000)
 
 int main(void) {
 	printf("started running\n");
-
+	/*
 	// Create the two input vectors
 	int i;
 	const int LIST_SIZE = 1024;
@@ -134,7 +138,29 @@ int main(void) {
 	free(A);
 	free(B);
 	free(C);
+	*/
 	
+	vector<cl::Platform> platforms;
+	Platform::get(&platforms);
+
+	_ASSERT(platforms.size() > 0);
+
+	vector <Device> devices;
+	
+	for (auto platform : platforms)
+	{
+		platform.getDevices(CL_DEVICE_TYPE_ALL, &devices); // Get all platform devices
+
+		cout << "Platform name: ";
+		cout << platform.getInfo<CL_PLATFORM_NAME>() << endl;
+
+		_ASSERT(devices.size() > 0);
+
+		cout << "Platform devices:" << endl;
+		for (auto device : devices) // first device
+			cout << device.getInfo<CL_DEVICE_VENDOR>() << endl;
+	}
+
 	system("pause");
 	return 0;
 }
