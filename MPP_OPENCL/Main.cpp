@@ -29,7 +29,9 @@ int main(void) {
 	return 0;
 }
 
-// Devices informations
+// Functions implementation
+
+// Devices informations function
 void getAvailableDevicesInfo() 
 {
 	// Gettings all available platforms
