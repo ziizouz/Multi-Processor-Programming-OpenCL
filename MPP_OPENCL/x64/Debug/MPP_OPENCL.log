@@ -1,2 +1,8 @@
-﻿  Main.cpp
+﻿  lodepng.cpp
+c:\users\zii\documents\visual studio projects\mpp_opencl\mpp_opencl\mpp_opencl\lodepng.cpp(3388): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\zii\documents\visual studio projects\mpp_opencl\mpp_opencl\mpp_opencl\lodepng.cpp(4337): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  Main.cpp
+c:\users\zii\documents\visual studio projects\mpp_opencl\mpp_opencl\mpp_opencl\main.cpp(114): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\zii\documents\visual studio projects\mpp_opencl\mpp_opencl\mpp_opencl\main.cpp(115): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
   MPP_OPENCL.vcxproj -> C:\Users\Zii\Documents\Visual Studio Projects\MPP_OpenCL\MPP_OPENCL\x64\Debug\MPP_OPENCL.exe
